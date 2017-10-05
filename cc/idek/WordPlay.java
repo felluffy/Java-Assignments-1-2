@@ -7,6 +7,8 @@ public class WordPlay {
 		WordPlay test = new WordPlay();
 		System.out.println(test.isVowel('a') + " " + test.isVowel('F'));
 		System.out.println(test.replaceVowels("Hello World", '*'));
+		System.out.println(test.emphasize("dna ctgaaactga", 'a') + " " + test.emphasize("Mary Bella Abracadabra", 'a'));
+
 	}
 
 	boolean isVowel(char ch)
@@ -24,6 +26,19 @@ public class WordPlay {
 		{
 			if(isVowel(ret.charAt(i)))
 				ret.setCharAt(i, ch);
+		}
+		return ret.toString();
+	}
+	
+	String emphasize(String phrase, char ch)
+	{
+		char chCopy = Character.toLowerCase(ch);
+		StringBuilder ret = new StringBuilder(phrase);
+		for(int i = 0; i != ret.length(); i++)
+		{
+			if(Character.toLowerCase(ret.charAt(i)) == chCopy)
+				//System.out.println(Character.toLowerCase(ret.charAt(i)));
+				ret.setCharAt(i, ((i + 1) % 2 != 0) ? '*' : '+');
 		}
 		return ret.toString();
 	}
