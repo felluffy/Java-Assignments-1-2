@@ -6,7 +6,7 @@ public class CaesarCipher {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CaesarCipher test = new CaesarCipher();
-		//System.out.println(test.encrypt("fIRST LeGION ATtACK EASp FLANk!", 23));
+		//System.out.println(test.encrypt("fIRSTÂ LeGIONÂ ATtACKÂ EASpÂ FLANk!", 23));
 		test.testCaesar();
 	}
 
